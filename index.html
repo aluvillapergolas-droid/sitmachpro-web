@@ -1194,10 +1194,10 @@
     </header>
 
     <main>
-        <!-- 4-Slide Hero Carousel -->
+        <!-- 4-Slide Hero Carousel (调用本地 WEBP 首页轮播图) -->
         <section id="home" class="hero-carousel" style="padding: 0;" aria-label="Featured Machinery Slideshow">
             <div class="slides-track" id="slidesTrack">
-                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80');">
+                <div class="slide" style="background-image: url('photo-1586528116311-ad8dd3c8310d.webp');">
                     <div class="slide-content">
                         <div class="slide-box">
                             <span class="slide-tag" data-i18n="s1Tag">Integrated Machinery Manufacturer</span>
@@ -1209,7 +1209,7 @@
                     </div>
                 </div>
 
-                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?auto=format&fit=crop&w=1600&q=80');">
+                <div class="slide" style="background-image: url('photo-1518709766631-a6a7f45921c3.webp');">
                     <div class="slide-content">
                         <div class="slide-box">
                             <span class="slide-tag" data-i18n="s2Tag">Models 800 / 1200 / 1800 Series</span>
@@ -1221,7 +1221,7 @@
                     </div>
                 </div>
 
-                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1600&q=80');">
+                <div class="slide" style="background-image: url('photo-1578575437130-527eed3abbec.webp');">
                     <div class="slide-content">
                         <div class="slide-box">
                             <span class="slide-tag" data-i18n="s3Tag">Standard & Hydraulic Dump Models</span>
@@ -1233,7 +1233,7 @@
                     </div>
                 </div>
 
-                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1600&q=80');">
+                <div class="slide" style="background-image: url('photo-1558904541-efa843a96f01.webp');">
                     <div class="slide-content">
                         <div class="slide-box">
                             <span class="slide-tag" data-i18n="s4Tag">Smart Slope & Orchard Mowing</span>
@@ -1272,7 +1272,7 @@
             </div>
         </section>
 
-        <!-- About Section (Factory Visual Image Embedded Here) -->
+        <!-- About Section (调用本地 JPG 厂房实景图) -->
         <section id="about" class="section-gray">
             <div class="container">
                 <div class="about-grid">
@@ -1307,8 +1307,7 @@
                     </div>
 
                     <div class="about-visual">
-                        <!-- Factory Visual Image Code Embedded: photo-1558904541-efa843a96f01 -->
-                        <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=900&q=80" alt="SIZHOU ZHONGJUN Shijiazhuang Manufacturing Facility" loading="lazy">
+                        <img src="photo-1558904541-efa843a96f01.jpg" alt="SIZHOU ZHONGJUN Shijiazhuang Manufacturing Facility" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -1528,15 +1527,16 @@
         heroEl.addEventListener('mouseenter', () => clearInterval(autoSlide));
         heroEl.addEventListener('mouseleave', () => autoSlide = setInterval(() => moveSlide(1), 5500));
 
+        // 产品展示区图片资产（已精准对应您仓库中的本地 .jpg 文件）
         const productAssets = [
-            { id: "SZ-800", img: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80" },
-            { id: "SZ-1200", img: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80" },
-            { id: "SZ-1800", img: "https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=800&q=80" },
-            { id: "SZ-TC01", img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" },
-            { id: "SZ-TC02D", img: "https://images.unsplash.com/photo-1579412690850-bd41cd0af397?auto=format&fit=crop&w=800&q=80" },
-            { id: "SZ-UC90", img: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&q=80" },
-            { id: "SZ-DB75", img: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800&q=80" },
-            { id: "SZ-LM550", img: "https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?auto=format&fit=crop&w=800&q=80" }
+            { id: "SZ-800", img: "photo-1581092160562-40aa08e78837.jpg" },
+            { id: "SZ-1200", img: "photo-1504917595217-d4dc5ebe6122.jpg" },
+            { id: "SZ-1800", img: "photo-1513828583688-c52646db42da.jpg" },
+            { id: "SZ-TC01", img: "photo-1504307651254-35680f356dfd.jpg" },
+            { id: "SZ-TC02D", img: "photo-1579412690850-bd41cd0af397.jpg" },
+            { id: "SZ-UC90", img: "photo-1581092918056-0c4c3acd3789.jpg" },
+            { id: "SZ-DB75", img: "photo-1530124566582-a618bc2615dc.jpg" },
+            { id: "SZ-LM550", img: "photo-1592417817098-8fd3d9eb14a5.jpg" }
         ];
 
         const i18nData = {

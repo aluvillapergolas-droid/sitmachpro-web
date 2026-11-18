@@ -280,7 +280,7 @@
             color: var(--text-primary);
         }
 
-        /* Hero 4-Slide Carousel (Light & Clean Style) */
+        /* Hero 4-Slide Carousel */
         .hero-carousel {
             position: relative;
             width: 100%;
@@ -306,7 +306,6 @@
             background-position: center;
         }
 
-        /* Soft light overlay to keep clean white/light-gray aesthetic while ensuring crisp text legibility */
         .slide::before {
             content: '';
             position: absolute;
@@ -397,6 +396,11 @@
             transition: all 0.2s;
         }
 
+        html[dir="rtl"] .btn-outline {
+            margin-left: 0;
+            margin-right: 12px;
+        }
+
         .btn-outline:hover {
             border-color: var(--accent-blue);
             color: var(--accent-blue);
@@ -430,6 +434,8 @@
 
         .arrow-prev { left: 20px; }
         .arrow-next { right: 20px; }
+        html[dir="rtl"] .arrow-prev { left: auto; right: 20px; }
+        html[dir="rtl"] .arrow-next { right: auto; left: 20px; }
 
         .carousel-dots {
             position: absolute;
@@ -637,7 +643,7 @@
             display: block;
         }
 
-        /* Blog Section - Direct Jump to Full Article View */
+        /* Blog Section */
         .blog-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -704,7 +710,6 @@
             border-color: var(--accent-blue);
         }
 
-        /* Dedicated Article Reader Box (Direct Anchor Target for Blog Links) */
         .article-reader {
             margin-top: 48px;
             background-color: var(--bg-white);
@@ -827,7 +832,7 @@
             background-color: #fff;
         }
 
-        /* Light & Clean Footer */
+        /* Footer */
         footer {
             background-color: var(--bg-light-gray);
             border-top: 1px solid var(--border-color);
@@ -865,6 +870,11 @@
             transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
+        html[dir="rtl"] .whatsapp-float {
+            right: auto;
+            left: 28px;
+        }
+
         .whatsapp-float:hover {
             transform: scale(1.08);
             box-shadow: 0 8px 25px rgba(37, 211, 102, 0.55);
@@ -885,6 +895,11 @@
             opacity: 0;
             pointer-events: none;
             transition: opacity 0.2s;
+        }
+
+        html[dir="rtl"] .whatsapp-tooltip {
+            right: auto;
+            left: 72px;
         }
 
         .whatsapp-float:hover .whatsapp-tooltip {
@@ -943,7 +958,6 @@
                         <li><a href="#home" data-i18n="navHome">Home</a></li>
                         <li><a href="#products" data-i18n="navProducts">Products</a></li>
                         <li><a href="#about" data-i18n="navAbout">About Us</a></li>
-                        <!-- Direct jump to the full Blog Article Reader -->
                         <li><a href="#blog-article-view" data-i18n="navBlog">Blog</a></li>
                         <li><a href="#contact" data-i18n="navContact">Contact</a></li>
                     </ul>
@@ -975,7 +989,6 @@
         <!-- 4-Slide Hero Carousel -->
         <section id="home" class="hero-carousel" style="padding: 0;" aria-label="Featured Machinery Slideshow">
             <div class="slides-track" id="slidesTrack">
-                <!-- Slide 1: Exploration Drilling Rigs -->
                 <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1600&q=80');">
                     <div class="slide-content">
                         <div class="slide-box">
@@ -988,7 +1001,6 @@
                     </div>
                 </div>
 
-                <!-- Slide 2: Tracked Carriers -->
                 <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80');">
                     <div class="slide-content">
                         <div class="slide-box">
@@ -1001,7 +1013,6 @@
                     </div>
                 </div>
 
-                <!-- Slide 3: Remote Lawn Mowers -->
                 <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?auto=format&fit=crop&w=1600&q=80');">
                     <div class="slide-content">
                         <div class="slide-box">
@@ -1014,7 +1025,6 @@
                     </div>
                 </div>
 
-                <!-- Slide 4: Compact Construction Machinery -->
                 <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=80');">
                     <div class="slide-content">
                         <div class="slide-box">
@@ -1049,10 +1059,9 @@
                 </div>
 
                 <div class="products-grid">
-                    <!-- Product 1 -->
                     <article class="product-card">
                         <div class="product-img-wrap">
-                            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80" alt="SIZHOU ZHONGJUN Exploration Drilling Rig" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80" alt="Exploration Drilling Rig" loading="lazy">
                         </div>
                         <div class="product-body">
                             <h3 class="product-title" data-i18n="p1Name">Exploration Drilling Rigs</h3>
@@ -1062,10 +1071,9 @@
                         </div>
                     </article>
 
-                    <!-- Product 2 -->
                     <article class="product-card">
                         <div class="product-img-wrap">
-                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="SIZHOU ZHONGJUN Tracked Carrier" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Tracked Carrier" loading="lazy">
                         </div>
                         <div class="product-body">
                             <h3 class="product-title" data-i18n="p2Name">Tracked Carrier Vehicles</h3>
@@ -1075,10 +1083,9 @@
                         </div>
                     </article>
 
-                    <!-- Product 3 -->
                     <article class="product-card">
                         <div class="product-img-wrap">
-                            <img src="https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?auto=format&fit=crop&w=800&q=80" alt="SIZHOU ZHONGJUN Remote Control Lawn Mower" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?auto=format&fit=crop&w=800&q=80" alt="Remote Control Lawn Mower" loading="lazy">
                         </div>
                         <div class="product-body">
                             <h3 class="product-title" data-i18n="p3Name">Smart Crawler Lawn Mowers</h3>
@@ -1088,10 +1095,9 @@
                         </div>
                     </article>
 
-                    <!-- Product 4 -->
                     <article class="product-card">
                         <div class="product-img-wrap">
-                            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80" alt="SIZHOU ZHONGJUN Compact Construction Machinery" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80" alt="Compact Construction Machinery" loading="lazy">
                         </div>
                         <div class="product-body">
                             <h3 class="product-title" data-i18n="p4Name">Compact Construction Machinery</h3>
@@ -1139,13 +1145,13 @@
                     </div>
 
                     <div class="about-visual">
-                        <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=900&q=80" alt="SIZHOU ZHONGJUN Shijiazhuang Manufacturing Facility" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=900&q=80" alt="Shijiazhuang Manufacturing Facility" loading="lazy">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Blog Section (Clicking nav Blog or any article button jumps directly to the full Blog Article Reader) -->
+        <!-- Blog Section -->
         <section id="blog">
             <div class="container">
                 <div class="section-header">
@@ -1154,27 +1160,8 @@
                     <p class="section-desc" data-i18n="blogDesc">Select any technical article below to read detailed maintenance guides and machinery selection tips directly on this page.</p>
                 </div>
 
-                <div class="blog-grid">
-                    <article class="blog-card">
-                        <div class="blog-meta"><span>#Drilling Rigs</span><span>•</span><span>5 Min Read</span></div>
-                        <h3 class="blog-title" data-i18n="b1Title">How to Choose the Right Hydraulic Exploration Drilling Rig for Complex Strata</h3>
-                        <p class="blog-excerpt" data-i18n="b1Excerpt">A practical comparison of spindle vs. top-head drive exploration rigs when drilling through gravel, clay, and hard bedrock layers.</p>
-                        <a href="#blog-article-view" class="blog-read-btn" onclick="openArticle(0)" data-i18n="readArticle">Read Full Article →</a>
-                    </article>
-
-                    <article class="blog-card">
-                        <div class="blog-meta"><span>#Tracked Carriers</span><span>•</span><span>4 Min Read</span></div>
-                        <h3 class="blog-title" data-i18n="b2Title">Rubber vs. Steel Tracks: Selecting the Best Undercarriage for Tracked Carriers</h3>
-                        <p class="blog-excerpt" data-i18n="b2Excerpt">Understand ground pressure, slope traction, and maintenance lifecycles to maximize productivity in orchards and muddy job sites.</p>
-                        <a href="#blog-article-view" class="blog-read-btn" onclick="openArticle(1)" data-i18n="readArticle">Read Full Article →</a>
-                    </article>
-
-                    <article class="blog-card">
-                        <div class="blog-meta"><span>#Smart Mowers</span><span>•</span><span>4 Min Read</span></div>
-                        <h3 class="blog-title" data-i18n="b3Title">Why Remote-Controlled Crawler Lawn Mowers Are Replacing Tractors on Steep Slopes</h3>
-                        <p class="blog-excerpt" data-i18n="b3Excerpt">Discover how low-center-of-gravity tracked mowers prevent rollovers and cut labor costs by 60% in solar farms and highway embankments.</p>
-                        <a href="#blog-article-view" class="blog-read-btn" onclick="openArticle(2)" data-i18n="readArticle">Read Full Article →</a>
-                    </article>
+                <div class="blog-grid" id="blogGridContainer">
+                    <!-- Populated dynamically via JS matching active language -->
                 </div>
 
                 <!-- Direct Jump Target: Full Blog Article Reader -->
@@ -1182,9 +1169,7 @@
                     <span class="article-badge" id="articleCategory">Technical Guide • SIZHOU ZHONGJUN</span>
                     <h3 id="articleHeading">How to Choose the Right Hydraulic Exploration Drilling Rig for Complex Strata</h3>
                     <div class="article-reader-body" id="articleBody">
-                        <p><strong>1. Evaluate Geological Formation & Core Diameter:</strong> When conducting mineral exploration or geotechnical site investigation, the hardness of rock formations (from soft alluvial soil to Grade 8–10 granite) dictates your required rotary torque and feed force. SIZHOU ZHONGJUN hydraulic exploration rigs feature variable-displacement pumps that automatically adapt rotational speed to strata resistance.</p>
-                        <p><strong>2. Mobility: Crawler-Mounted vs. Modular Portable Rigs:</strong> For mountainous or roadless terrain, self-propelled rubber or steel tracked exploration rigs eliminate crane loading costs and allow rapid hole-to-hole repositioning. For ultra-remote sites, our modular split-frame rigs can be disassembled into lightweight components.</p>
-                        <p><strong>3. Hydraulic Cooling & Continuous Duty Cycle:</strong> Extended drilling shifts generate substantial hydraulic heat. Always verify that your rig includes an oversized aluminum air-oil cooler and dual-stage filtration—standard features across all SIZHOU ZHONGJUN drilling models manufactured in Shijiazhuang.</p>
+                        <!-- Populated dynamically via JS matching active language -->
                     </div>
                 </article>
             </div>
@@ -1245,24 +1230,24 @@
                     <form class="contact-form" onsubmit="handleFormSubmit(event)">
                         <div class="form-group">
                             <label for="senderName" data-i18n="fName">Your Name / Company</label>
-                            <input type="text" id="senderName" class="form-control" required placeholder="John Doe / ABC Construction">
+                            <input type="text" id="senderName" class="form-control" required data-i18n-placeholder="fPhName" placeholder="John Doe / ABC Construction">
                         </div>
                         <div class="form-group">
                             <label for="senderEmail" data-i18n="fEmail">Email or WhatsApp Number</label>
-                            <input type="text" id="senderEmail" class="form-control" required placeholder="name@company.com / +1 234 567 890">
+                            <input type="text" id="senderEmail" class="form-control" required data-i18n-placeholder="fPhEmail" placeholder="name@company.com / +1 234 567 890">
                         </div>
                         <div class="form-group">
                             <label for="productSelect" data-i18n="fProduct">Interested Machinery</label>
                             <select id="productSelect" class="form-control">
-                                <option value="Exploration Drilling Rig">Exploration Drilling Rig (勘探机)</option>
-                                <option value="Tracked Carrier Vehicle">Tracked Carrier Vehicle (履带车)</option>
-                                <option value="Remote Control Lawn Mower">Remote Control Lawn Mower (割草机)</option>
-                                <option value="Compact Construction Machinery">Compact Construction Machinery (小型工程机械)</option>
+                                <option value="Exploration Drilling Rig" data-i18n="opt1">Exploration Drilling Rig (勘探机)</option>
+                                <option value="Tracked Carrier Vehicle" data-i18n="opt2">Tracked Carrier Vehicle (履带车)</option>
+                                <option value="Remote Control Lawn Mower" data-i18n="opt3">Remote Control Lawn Mower (割草机)</option>
+                                <option value="Compact Construction Machinery" data-i18n="opt4">Compact Construction Machinery (小型工程机械)</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="senderMsg" data-i18n="fMsg">Requirements & Destination Port</label>
-                            <textarea id="senderMsg" rows="4" class="form-control" required placeholder="Please specify model, engine preference, or quantity..."></textarea>
+                            <textarea id="senderMsg" rows="4" class="form-control" required data-i18n-placeholder="fPhMsg" placeholder="Please specify model, engine preference, or quantity..."></textarea>
                         </div>
                         <button type="submit" class="btn-primary" style="width:100%; justify-content:center;" data-i18n="fSubmit">Send Inquiry via Email / WhatsApp</button>
                     </form>
@@ -1283,7 +1268,7 @@
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Contact Button -->
+    <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/8615226505955?text=Hello%20SIZHOU%20ZHONGJUN%2C%20I%20am%20interested%20in%20your%20machinery." 
        class="whatsapp-float" 
        target="_blank" 
@@ -1345,56 +1330,7 @@
         heroEl.addEventListener('mouseenter', () => clearInterval(autoSlide));
         heroEl.addEventListener('mouseleave', () => autoSlide = setInterval(() => moveSlide(1), 5500));
 
-        /* 4. Blog Article Switcher (Direct Reading) */
-        const blogArticles = [
-            {
-                cat: "Drilling Engineering • SIZHOU ZHONGJUN",
-                title: "How to Choose the Right Hydraulic Exploration Drilling Rig for Complex Strata",
-                body: `
-                    <p><strong>1. Evaluate Geological Formation & Core Diameter:</strong> When conducting mineral exploration or geotechnical site investigation, the hardness of rock formations (from soft alluvial soil to Grade 8–10 granite) dictates your required rotary torque and feed force. SIZHOU ZHONGJUN hydraulic exploration rigs feature variable-displacement pumps that automatically adapt rotational speed to strata resistance.</p>
-                    <p><strong>2. Mobility: Crawler-Mounted vs. Modular Portable Rigs:</strong> For mountainous or roadless terrain, self-propelled rubber or steel tracked exploration rigs eliminate crane loading costs and allow rapid hole-to-hole repositioning. For ultra-remote sites, our modular split-frame rigs can be disassembled into lightweight components.</p>
-                    <p><strong>3. Hydraulic Cooling & Continuous Duty Cycle:</strong> Extended drilling shifts generate substantial hydraulic heat. Always verify that your rig includes an oversized aluminum air-oil cooler and dual-stage filtration—standard features across all SIZHOU ZHONGJUN drilling models manufactured in Shijiazhuang.</p>
-                `
-            },
-            {
-                cat: "Undercarriage & Transport • SIZHOU ZHONGJUN",
-                title: "Rubber vs. Steel Tracks: Selecting the Best Undercarriage for Tracked Carriers",
-                body: `
-                    <p><strong>1. Rubber Tracked Carriers for Paved & Orchard Terrain:</strong> Rubber tracks protect concrete surfaces, asphalt, and tree roots while offering quieter operation and higher travel speeds. They are ideal for agricultural transport, municipal maintenance, and light construction.</p>
-                    <p><strong>2. Steel Tracked Carriers for Sharp Rock & Heavy Payloads:</strong> When carrying heavy drilling rigs or 5+ ton payloads across jagged quarry stone or deep mud, high-tensile manganese steel tracks prevent tearing and deliver superior climbing grip.</p>
-                    <p><strong>3. Custom Chassis Engineering:</strong> Hebei Sizhou Exploration Machinery designs custom crawler undercarriages with hydraulic dump beds, crane booms, or flatbeds tailored to your exact payload requirements.</p>
-                `
-            },
-            {
-                cat: "Smart Landscaping • SIZHOU ZHONGJUN",
-                title: "Why Remote-Controlled Crawler Lawn Mowers Are Replacing Tractors on Steep Slopes",
-                body: `
-                    <p><strong>1. Operator Safety on 45° Embankments:</strong> Traditional ride-on tractors face severe rollover risks on highway slopes, riverbanks, and terraced orchards. With a 200-meter wireless remote control range, operators remain safely on flat ground while guiding the mower effortlessly.</p>
-                    <p><strong>2. Hybrid Gasoline-Electric Drive Efficiency:</strong> SIZHOU ZHONGJUN remote mowers pair high-output Loncin/Yamaha engines for heavy flail blades with independent brushless electric track motors—ensuring zero-turn agility and low fuel consumption.</p>
-                    <p><strong>3. High Efficiency in Solar Farms & Orchards:</strong> The low-profile chassis easily clears under solar panels and low-hanging orchard branches where conventional tractors cannot reach.</p>
-                `
-            }
-        ];
-
-        function openArticle(index) {
-            const art = blogArticles[index];
-            document.getElementById('articleCategory').textContent = art.cat;
-            document.getElementById('articleHeading').textContent = art.title;
-            document.getElementById('articleBody').innerHTML = art.body;
-        }
-
-        /* 5. Contact Form Handler (Opens pre-filled email/WhatsApp) */
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            const name = document.getElementById('senderName').value;
-            const contact = document.getElementById('senderEmail').value;
-            const prod = document.getElementById('productSelect').value;
-            const msg = document.getElementById('senderMsg').value;
-            const fullText = `Inquiry for SIZHOU ZHONGJUN\nName: ${name}\nContact: ${contact}\nProduct: ${prod}\nDetails: ${msg}`;
-            window.open(`https://wa.me/8615226505955?text=${encodeURIComponent(fullText)}`, '_blank');
-        }
-
-        /* 6. 6-Language Translation Dictionary (EN, AR, ES, DE, FR, RU) */
+        /* 4. Multi-language Dictionaries & Blog Data */
         const i18nData = {
             en: {
                 companyName: "Hebei Sizhou Exploration Machinery",
@@ -1432,12 +1368,6 @@
                 blogSub: "Technical Insights & Field Guides",
                 blogTitle: "SIZHOU ZHONGJUN Engineering Blog",
                 blogDesc: "Select any technical article below to read detailed maintenance guides and machinery selection tips directly.",
-                b1Title: "How to Choose the Right Hydraulic Exploration Drilling Rig for Complex Strata",
-                b1Excerpt: "A practical comparison of spindle vs. top-head drive exploration rigs when drilling through gravel, clay, and hard bedrock.",
-                b2Title: "Rubber vs. Steel Tracks: Selecting the Best Undercarriage for Tracked Carriers",
-                b2Excerpt: "Understand ground pressure, slope traction, and maintenance lifecycles to maximize productivity in orchards and muddy sites.",
-                b3Title: "Why Remote-Controlled Crawler Lawn Mowers Are Replacing Tractors on Steep Slopes",
-                b3Excerpt: "Discover how low-center-of-gravity tracked mowers prevent rollovers and cut labor costs by 60% in solar farms.",
                 readArticle: "Read Full Article →",
                 contactSub: "Direct Factory Inquiry",
                 contactTitle: "Contact SIZHOU ZHONGJUN",
@@ -1445,7 +1375,41 @@
                 lblCompany: "Company & Brand", lblAddress: "Factory Address", valAddress: "Shijiazhuang, Hebei Province, China",
                 lblPhone: "Telephone", lblEmail: "Email",
                 fName: "Your Name / Company", fEmail: "Email or WhatsApp Number", fProduct: "Interested Machinery",
-                fMsg: "Requirements & Destination Port", fSubmit: "Send Inquiry via WhatsApp"
+                fMsg: "Requirements & Destination Port", fSubmit: "Send Inquiry via WhatsApp",
+                fPhName: "John Doe / ABC Construction", fPhEmail: "name@company.com / +1 234 567 890", fPhMsg: "Please specify model, engine preference, or quantity...",
+                opt1: "Exploration Drilling Rig (勘探机)", opt2: "Tracked Carrier Vehicle (履带车)", opt3: "Remote Control Lawn Mower (割草机)", opt4: "Compact Construction Machinery (小型工程机械)",
+                blogs: [
+                    {
+                        cat: "Drilling Engineering • SIZHOU ZHONGJUN",
+                        title: "How to Choose the Right Hydraulic Exploration Drilling Rig for Complex Strata",
+                        excerpt: "A practical comparison of spindle vs. top-head drive exploration rigs when drilling through gravel, clay, and hard bedrock layers.",
+                        body: `
+                            <p><strong>1. Evaluate Geological Formation & Core Diameter:</strong> When conducting mineral exploration or geotechnical site investigation, the hardness of rock formations (from soft alluvial soil to Grade 8–10 granite) dictates your required rotary torque and feed force. SIZHOU ZHONGJUN hydraulic exploration rigs feature variable-displacement pumps that automatically adapt rotational speed to strata resistance.</p>
+                            <p><strong>2. Mobility: Crawler-Mounted vs. Modular Portable Rigs:</strong> For mountainous or roadless terrain, self-propelled rubber or steel tracked exploration rigs eliminate crane loading costs and allow rapid hole-to-hole repositioning. For ultra-remote sites, our modular split-frame rigs can be disassembled into lightweight components.</p>
+                            <p><strong>3. Hydraulic Cooling & Continuous Duty Cycle:</strong> Extended drilling shifts generate substantial hydraulic heat. Always verify that your rig includes an oversized aluminum air-oil cooler and dual-stage filtration—standard features across all SIZHOU ZHONGJUN drilling models manufactured in Shijiazhuang.</p>
+                        `
+                    },
+                    {
+                        cat: "Undercarriage & Transport • SIZHOU ZHONGJUN",
+                        title: "Rubber vs. Steel Tracks: Selecting the Best Undercarriage for Tracked Carriers",
+                        excerpt: "Understand ground pressure, slope traction, and maintenance lifecycles to maximize productivity in orchards and muddy job sites.",
+                        body: `
+                            <p><strong>1. Rubber Tracked Carriers for Paved & Orchard Terrain:</strong> Rubber tracks protect concrete surfaces, asphalt, and tree roots while offering quieter operation and higher travel speeds. They are ideal for agricultural transport, municipal maintenance, and light construction.</p>
+                            <p><strong>2. Steel Tracked Carriers for Sharp Rock & Heavy Payloads:</strong> When carrying heavy drilling rigs or 5+ ton payloads across jagged quarry stone or deep mud, high-tensile manganese steel tracks prevent tearing and deliver superior climbing grip.</p>
+                            <p><strong>3. Custom Chassis Engineering:</strong> Hebei Sizhou Exploration Machinery designs custom crawler undercarriages with hydraulic dump beds, crane booms, or flatbeds tailored to your exact payload requirements.</p>
+                        `
+                    },
+                    {
+                        cat: "Smart Landscaping • SIZHOU ZHONGJUN",
+                        title: "Why Remote-Controlled Crawler Lawn Mowers Are Replacing Tractors on Steep Slopes",
+                        excerpt: "Discover how low-center-of-gravity tracked mowers prevent rollovers and cut labor costs by 60% in solar farms and highway embankments.",
+                        body: `
+                            <p><strong>1. Operator Safety on 45° Embankments:</strong> Traditional ride-on tractors face severe rollover risks on highway slopes, riverbanks, and terraced orchards. With a 200-meter wireless remote control range, operators remain safely on flat ground while guiding the mower effortlessly.</p>
+                            <p><strong>2. Hybrid Gasoline-Electric Drive Efficiency:</strong> SIZHOU ZHONGJUN remote mowers pair high-output Loncin/Yamaha engines for heavy flail blades with independent brushless electric track motors—ensuring zero-turn agility and low fuel consumption.</p>
+                            <p><strong>3. High Efficiency in Solar Farms & Orchards:</strong> The low-profile chassis easily clears under solar panels and low-hanging orchard branches where conventional tractors cannot reach.</p>
+                        `
+                    }
+                ]
             },
             ar: {
                 companyName: "شركة خبي سيتشو لآلات الاستكشاف",
@@ -1483,12 +1447,6 @@
                 blogSub: "رؤى تقنية وأدلة ميدانية",
                 blogTitle: "مدونة SIZHOU ZHONGJUN الهندسية",
                 blogDesc: "اختر أي مقال تقني أدناه لقراءة أدلة الصيانة ونصائح اختيار الآلات مباشرة.",
-                b1Title: "كيفية اختيار حفار الاستكشاف الهيدروليكي المناسب للطبقات المعقدة",
-                b1Excerpt: "مقارنة عملية لحفارات الاستكشاف عند الحفر عبر طبقات الحصى والطين والصخور الصلبة.",
-                b2Title: "الجنازير المطاطية مقابل الفولاذية: اختيار الهيكل السفلي الأفضل",
-                b2Excerpt: "تعرف على الضغط الأرضي وقوة الجر على المنحدرات لزيادة الإنتاجية في البساتين والمواقع الطينية.",
-                b3Title: "لماذا تحل جزازات العشب المجنزرة محل الجرارات في المنحدرات الشديدة",
-                b3Excerpt: "اكتشف كيف تمنع الجزازات ذات مركز الثقل المنخفض الانقلاب وتقلل تكاليف العمالة بنسبة 60%.",
                 readArticle: "اقرأ المقال كاملاً ←",
                 contactSub: "استفسار مباشر من المصنع",
                 contactTitle: "تواصل مع SIZHOU ZHONGJUN",
@@ -1496,7 +1454,41 @@
                 lblCompany: "الشركة والعلامة التجارية", lblAddress: "عنوان المصنع", valAddress: "شيجياتشوانغ، مقاطعة خبي، الصين",
                 lblPhone: "الهاتف", lblEmail: "البريد الإلكتروني",
                 fName: "الاسم / الشركة", fEmail: "البريد الإلكتروني أو رقم واتساب", fProduct: "الآلة المطلوبة",
-                fMsg: "المتطلبات وميناء الوصول", fSubmit: "إرسال الاستفسار عبر واتساب"
+                fMsg: "المتطلبات وميناء الوصول", fSubmit: "إرسال الاستفسار عبر واتساب",
+                fPhName: "محمد أحمد / شركة الإنشاءات", fPhEmail: "name@company.com / +1 234 567 890", fPhMsg: "يرجى تحديد الموديل أو تفضيل المحرك أو الكمية المطلوبة...",
+                opt1: "حفارة استكشاف (Exploration Drilling Rig)", opt2: "مركبة مجنزرة ناقلة (Tracked Carrier)", opt3: "جزازة عشب بريموت (Remote Lawn Mower)", opt4: "آلات بناء مدمجة (Compact Construction)",
+                blogs: [
+                    {
+                        cat: "هندسة الحفر • SIZHOU ZHONGJUN",
+                        title: "كيفية اختيار حفار الاستكشاف الهيدروليكي المناسب للطبقات المعقدة",
+                        excerpt: "مقارنة عملية لحفارات الاستكشاف عند الحفر عبر طبقات الحصى والطين والصخور الصلبة.",
+                        body: `
+                            <p><strong>1. تقييم التكوينات الجيولوجية وقطر اللب:</strong> عند إجراء استكشاف المعادن أو التحقيقات الجيوتقنية، يحدد صلابة التكوينات الصخرية عزم الدوران وقوة التغذية المطلوبة. تتميز حفارات SIZHOU ZHONGJUN بمضخات ذات إزاحة متغيرة تتكيف تلقائياً مع مقاومة الطبقات.</p>
+                            <p><strong>2. الحركة: الحفارات المجنزرة مقابل المحمولة:</strong> بالنسبة للتضاريس الجبلية أو الوعرة، تضمن الحفارات ذاتية الحركة والمجنزرة إلغاء تكاليف التحميل بالرافعة وتتيح إعادة التمركز السريع.</p>
+                            <p><strong>3. التبريد الهيدروليكي ودورة التشغيل المستمرة:</strong> تولد نوبات الحفر الممتدة حرارة هيدروليكية كبيرة. تأكد دائماً من أن الحفار يحتوي على مبرد زيت هواء ألومنيوم كبير الحجم.</p>
+                        `
+                    },
+                    {
+                        cat: "الهيكل النقال • SIZHOU ZHONGJUN",
+                        title: "الجنازير المطاطية مقابل الفولاذية: اختيار الهيكل السفلي الأفضل",
+                        excerpt: "تعرف على الضغط الأرضي وقوة الجر على المنحدرات لزيادة الإنتاجية في البساتين والمواقع الطينية.",
+                        body: `
+                            <p><strong>1. الناقلات ذات الجنازير المطاطية:</strong> تحمي الأسطح الخرسانية والأسفلت وجذور الأشجار مع توفير تشغيل أكثر هدوءاً وسرعات تنقل أعلى.</p>
+                            <p><strong>2. الناقلات ذات الجنازير الفولاذية:</strong> عند نقل معدات الحفر الثقيلة أو أحمال تزيد عن 5 أطنان عبر أحجار المحاجر الوعرة أو الطين العميقة، تمنع جنازير الصلب التمزق وتوفر قبضة فائقة.</p>
+                            <p><strong>3. هندسة الهيكل المخصص:</strong> تصمم الشركة هياكل مجنزرة مخصصة مع أحواض قلابة هيدروليكية أو رافعات حسب متطلبات الحمولة الخاصة بك.</p>
+                        `
+                    },
+                    {
+                        cat: "تنسيق الحدائق الذكي • SIZHOU ZHONGJUN",
+                        title: "لماذا تحل جزازات العشب المجنزرة محل الجرارات في المنحدرات الشديدة",
+                        excerpt: "اكتشف كيف تمنع الجزازات ذات مركز الثقل المنخفض الانقلاب وتقلل تكاليف العمالة بنسبة 60%.",
+                        body: `
+                            <p><strong>1. سلامة المشغل على المنحدرات بزاوية 45°:</strong> تواجه الجرارات التقليدية مخاطر انقلاب شديدة. مع نطاق تحكم عن بعد يبلغ 200 متر، يظل المشغلون بأمان على أرض مسطحة.</p>
+                            <p><strong>2. كفاءة المحرك الهجين (بنزين-كهرباء):</strong> تجمع جزازات SIZHOU ZHONGJUN بين محركات عالية الأداء ومحركات جنازير كهربائية مستقلة لضمان خفة الحركة واستهلاك منخفض للوقود.</p>
+                            <p><strong>3. كفاءة عالية في مزارع الطاقة الشمسية:</strong> ينظف الهيكل المنخفض بسهولة أسفل الألواح الشمسية وفروع الأشجار المنخفضة.</p>
+                        `
+                    }
+                ]
             },
             es: {
                 companyName: "Hebei Sizhou Exploration Machinery",
@@ -1534,12 +1526,6 @@
                 blogSub: "Guías Técnicas y Consejos",
                 blogTitle: "Blog de Ingeniería SIZHOU ZHONGJUN",
                 blogDesc: "Seleccione cualquier artículo técnico a continuación para leer las guías completas directamente aquí.",
-                b1Title: "Cómo Elegir la Perforadora Hidráulica de Exploración Adecuada para Estratos Complejos",
-                b1Excerpt: "Comparación práctica entre perforadoras de husillo y cabezal superior al perforar grava, arcilla y roca madre.",
-                b2Title: "Orugas de Caucho vs. Acero: Cómo Elegir el Mejor Tren de Rodaje",
-                b2Excerpt: "Comprenda la presión sobre el suelo, tracción en pendientes y mantenimiento para maximizar la productividad.",
-                b3Title: "Por Qué los Cortacéspedes Oruga Remotos Reemplazan a los Tractores en Pendientes",
-                b3Excerpt: "Descubra cómo su bajo centro de gravedad evita vuelcos y reduce los costos laborales en un 60%.",
                 readArticle: "Leer Artículo Completo →",
                 contactSub: "Consulta Directa de Fábrica",
                 contactTitle: "Contactar a SIZHOU ZHONGJUN",
@@ -1547,7 +1533,41 @@
                 lblCompany: "Empresa y Marca", lblAddress: "Dirección de Fábrica", valAddress: "Shijiazhuang, Provincia de Hebei, China",
                 lblPhone: "Teléfono", lblEmail: "Correo Electrónico",
                 fName: "Su Nombre / Empresa", fEmail: "Email o Número de WhatsApp", fProduct: "Maquinaria de Interés",
-                fMsg: "Requisitos y Puerto de Destino", fSubmit: "Enviar Consulta por WhatsApp"
+                fMsg: "Requisitos y Puerto de Destino", fSubmit: "Enviar Consulta por WhatsApp",
+                fPhName: "Juan Pérez / Constructora ABC", fPhEmail: "name@company.com / +1 234 567 890", fPhMsg: "Especifique modelo, motor o cantidad...",
+                opt1: "Perforadora de Exploración", opt2: "Transportador Oruga", opt3: "Cortacésped Remoto", opt4: "Maquinaria Compacta",
+                blogs: [
+                    {
+                        cat: "Ingeniería de Perforación • SIZHOU ZHONGJUN",
+                        title: "Cómo Elegir la Perforadora Hidráulica de Exploración Adecuada para Estratos Complejos",
+                        excerpt: "Comparación práctica entre perforadoras de husillo y cabezal superior al perforar grava, arcilla y roca madre.",
+                        body: `
+                            <p><strong>1. Evaluar Formación Geológica y Diámetro:</strong> La dureza de las formaciones rocosas determina el torque y la fuerza de avance requeridos. Las perforadoras SIZHOU ZHONGJUN cuentan con bombas de desplazamiento variable.</p>
+                            <p><strong>2. Movilidad: Oruga vs Portátil:</strong> Para terrenos montañosos, las unidades autopropulsadas eliminan costos de grúa y agilizan el reubicado.</p>
+                            <p><strong>3. Enfriamiento Hidráulico:</strong> Los turnos de perforación prolongados generan calor. Asegúrese de contar con enfriadores de aceite de aluminio sobredimensionados.</p>
+                        `
+                    },
+                    {
+                        cat: "Tren de Rodaje y Transporte • SIZHOU ZHONGJUN",
+                        title: "Orugas de Caucho vs. Acero: Cómo Elegir el Mejor Tren de Rodaje",
+                        excerpt: "Comprenda la presión sobre el suelo, tracción en pendientes y mantenimiento para maximizar la productividad.",
+                        body: `
+                            <p><strong>1. Orugas de Caucho:</strong> Protegen el pavimento, asfalto y raíces de árboles, ideales para agricultura y mantenimiento municipal.</p>
+                            <p><strong>2. Orugas de Acero:</strong> Para cargas pesadas sobre piedra de cantera o lodo profundo, las orugas de acero de alta resistencia evitan desgarros.</p>
+                            <p><strong>3. Ingeniería de Chasis Personalizado:</strong> Diseñamos chasís con tolvas basculantes hidráulicas o plataformas según sus necesidades.</p>
+                        `
+                    },
+                    {
+                        cat: "Paisajismo Inteligente • SIZHOU ZHONGJUN",
+                        title: "Por Qué los Cortacéspedes Oruga Remotos Reemplazan a los Tractores en Pendientes",
+                        excerpt: "Descubra cómo su bajo centro de gravedad evita vuelcos y reduce los costos laborales en un 60%.",
+                        body: `
+                            <p><strong>1. Seguridad en Pendientes de 45°:</strong> Los tractores tradicionales enfrentan riesgos de vuelco. Con control remoto de 200m, el operador permanece seguro.</p>
+                            <p><strong>2. Tracción Híbrida:</strong> Motores Loncin/Yamaha combinados con motores eléctricos independientes en las orugas para agilidad total.</p>
+                            <p><strong>3. Alta Eficiencia:</strong> El chasis de perfil bajo limpia fácilmente bajo paneles solares y ramas bajas.</p>
+                        `
+                    }
+                ]
             },
             de: {
                 companyName: "Hebei Sizhou Exploration Machinery",
@@ -1585,12 +1605,6 @@
                 blogSub: "Fachwissen & Praxisleitfäden",
                 blogTitle: "SIZHOU ZHONGJUN Technik-Blog",
                 blogDesc: "Wählen Sie unten einen Fachartikel aus, um ihn direkt vollständig zu lesen.",
-                b1Title: "Auswahl des richtigen hydraulischen Explorationsbohrgeräts für komplexe Schichten",
-                b1Excerpt: "Praxisvergleich von Spindel- und Kraftdrehkopf-Bohrgeräten beim Bohren durch Kies, Ton und Hartgestein.",
-                b2Title: "Gummi- vs. Stahlketten: Das optimale Fahrwerk für Raupentransporter",
-                b2Excerpt: "Alles über Bodendruck, Hangtraktion und Wartung für maximale Produktivität im Gelände.",
-                b3Title: "Warum ferngesteuerte Raupenmäher Traktoren an Steilhängen ersetzen",
-                b3Excerpt: "Erfahren Sie, wie ein niedriger Schwerpunkt Überschläge verhindert und Arbeitskosten um 60 % senkt.",
                 readArticle: "Vollständigen Artikel lesen →",
                 contactSub: "Direkte Werksanfrage",
                 contactTitle: "Kontaktieren Sie SIZHOU ZHONGJUN",
@@ -1598,7 +1612,41 @@
                 lblCompany: "Unternehmen & Marke", lblAddress: "Werksadresse", valAddress: "Shijiazhuang, Provinz Hebei, China",
                 lblPhone: "Telefon", lblEmail: "E-Mail",
                 fName: "Ihr Name / Firma", fEmail: "E-Mail oder WhatsApp-Nummer", fProduct: "Gewünschte Maschine",
-                fMsg: "Anforderungen & Zielhafen", fSubmit: "Anfrage per WhatsApp senden"
+                fMsg: "Anforderungen & Zielhafen", fSubmit: "Anfrage per WhatsApp senden",
+                fPhName: "Max Mustermann / ABC Bau", fPhEmail: "name@company.com / +1 234 567 890", fPhMsg: "Bitte Modell, Motor oder Menge angeben...",
+                opt1: "Explorationsbohrgerät", opt2: "Raupentransporter", opt3: "Ferngesteuerter Rasenmäher", opt4: "Kompakte Baumaschinen",
+                blogs: [
+                    {
+                        cat: "Bohringenieurwesen • SIZHOU ZHONGJUN",
+                        title: "Auswahl des richtigen hydraulischen Explorationsbohrgeräts für komplexe Schichten",
+                        excerpt: "Praxisvergleich von Spindel- und Kraftdrehkopf-Bohrgeräten beim Bohren durch Kies, Ton und Hartgestein.",
+                        body: `
+                            <p><strong>1. Geologische Formation & Kerndurchmesser:</strong> Die Gesteinshärte bestimmt Drehmoment und Vorschubkraft. SIZHOU ZHONGJUN Bohrer nutzen Verstellpumpen für automatische Anpassung.</p>
+                            <p><strong>2. Mobilität: Raupen- vs. Modulbohrgeräte:</strong> Selbstfahrende Kettenfahrzeuge eliminieren Krankosten im gebirgigen Gelände.</p>
+                            <p><strong>3. Hydraulikkühlung:</strong> Lange Schichten erzeugen Hitze. Übergroße Aluminium-Ölkühler gehören zum Standard.</p>
+                        `
+                    },
+                    {
+                        cat: "Fahrwerk & Transport • SIZHOU ZHONGJUN",
+                        title: "Gummi- vs. Stahlketten: Das optimale Fahrwerk für Raupentransporter",
+                        excerpt: "Alles über Bodendruck, Hangtraktion und Wartung für maximale Produktivität im Gelände.",
+                        body: `
+                            <p><strong>1. Gummiketten:</strong> Schonen Beton, Asphalt und Baumwurzeln bei leiseren Betrieb und höheren Geschwindigkeiten.</p>
+                            <p><strong>2. Stahlketten:</strong> Für scharfe Felsen und Nutzlasten über 5 Tonnen im tiefen Schlamm.</p>
+                            <p><strong>3. Maßgeschneiderte Chassis:</strong> Entwicklung nach exakten Nutzlastvorgaben.</p>
+                        `
+                    },
+                    {
+                        cat: "Smarte Landschaftspflege • SIZHOU ZHONGJUN",
+                        title: "Warum ferngesteuerte Raupenmäher Traktoren an Steilhängen ersetzen",
+                        excerpt: "Erfahren Sie, wie ein niedriger Schwerpunkt Überschläge verhindert und Arbeitskosten um 60 % senkt.",
+                        body: `
+                            <p><strong>1. Sicherheit an 45°-Hängen:</strong> Kein Risiko von Überschlägen dank 200m Funkfernsteuerung.</p>
+                            <p><strong>2. Hybrid-Antrieb:</strong> Loncin/Yamaha-Motoren kombiniert mit bürstenlosen Elektro-Kettenmotoren.</p>
+                            <p><strong>3. Hohe Effizienz:</strong> Niedriges Profil für Solar- und Obstparks.</p>
+                        `
+                    }
+                ]
             },
             fr: {
                 companyName: "Hebei Sizhou Exploration Machinery",
@@ -1636,12 +1684,6 @@
                 blogSub: "Guides Techniques & Conseils",
                 blogTitle: "Blog d'Ingénierie SIZHOU ZHONGJUN",
                 blogDesc: "Sélectionnez un article technique ci-dessous pour lire le guide complet directement sur cette page.",
-                b1Title: "Comment Choisir la Bonne Foreuse Hydraulique d'Exploration pour Strates Complexes",
-                b1Excerpt: "Comparaison pratique des foreuses à broche et à tête rotative pour le gravier, l'argile et la roche mère.",
-                b2Title: "Chenilles Caoutchouc vs Acier : Choisir le Meilleur Train de Roulement",
-                b2Excerpt: "Comprendre la pression au sol, l'adhérence en pente et l'entretien pour maximiser la productivité.",
-                b3Title: "Pourquoi les Tondeuses sur Chenilles Télécommandées Remplacent les Tracteurs",
-                b3Excerpt: "Découvrez comment leur centre de gravité bas évite les retournements et réduit les coûts de 60 %.",
                 readArticle: "Lire l'article complet →",
                 contactSub: "Demande Directe Usine",
                 contactTitle: "Contacter SIZHOU ZHONGJUN",
@@ -1649,7 +1691,41 @@
                 lblCompany: "Entreprise & Marque", lblAddress: "Adresse de l'Usine", valAddress: "Shijiazhuang, Province du Hebei, Chine",
                 lblPhone: "Téléphone", lblEmail: "E-mail",
                 fName: "Votre Nom / Entreprise", fEmail: "E-mail ou Numéro WhatsApp", fProduct: "Machine Souhaitée",
-                fMsg: "Besoins & Port de Destination", fSubmit: "Envoyer via WhatsApp"
+                fMsg: "Besoins & Port de Destination", fSubmit: "Envoyer via WhatsApp",
+                fPhName: "Jean Dupont / Construction ABC", fPhEmail: "name@company.com / +1 234 567 890", fPhMsg: "Veuillez spécifier le modèle ou la quantité...",
+                opt1: "Foreuse d'Exploration", opt2: "Transporteur sur Chenilles", opt3: "Tondeuse Télécommandée", opt4: "Engins Compacts",
+                blogs: [
+                    {
+                        cat: "Ingénierie de Forage • SIZHOU ZHONGJUN",
+                        title: "Comment Choisir la Bonne Foreuse Hydraulique d'Exploration pour Strates Complexes",
+                        excerpt: "Comparaison pratique des foreuses à broche et à tête rotative pour le gravier, l'argile et la roche mère.",
+                        body: `
+                            <p><strong>1. Évaluation Géologique :</strong> La dureté des formations dicte le couple et la force d'avance requis. Les foreuses SIZHOU ZHONGJUN intègrent des pompes à cylindrée variable.</p>
+                            <p><strong>2. Mobilité :</strong> Chenilles vs transportables pour les terrains accidentés.</p>
+                            <p><strong>3. Refroidissement :</strong> Refroidisseurs d'huile surdimensionnés de série.</p>
+                        `
+                    },
+                    {
+                        cat: "Train de Roulement • SIZHOU ZHONGJUN",
+                        title: "Chenilles Caoutchouc vs Acier : Choisir le Meilleur Train de Roulement",
+                        excerpt: "Comprendre la pression au sol, l'adhérence en pente et l'entretien pour maximiser la productivité.",
+                        body: `
+                            <p><strong>1. Chenilles Caoutchouc :</strong> Protègent le béton et l'asphalte.</p>
+                            <p><strong>2. Chenilles Acier :</strong> Pour la roche dure et les charges lourdes en profondeur.</p>
+                            <p><strong>3. Châssis sur mesure :</strong> Adaptés à vos exigences exactes.</p>
+                        `
+                    },
+                    {
+                        cat: "Espaces Verts Intelligents • SIZHOU ZHONGJUN",
+                        title: "Pourquoi les Tondeuses sur Chenilles Télécommandées Remplacent les Tracteurs",
+                        excerpt: "Découvrez comment leur centre de gravité bas évite les retournements et réduit les coûts de 60 %.",
+                        body: `
+                            <p><strong>1. Sécurité maximale :</strong> Télécommande sans fil de 200 mètres sur pentes de 45°.</p>
+                            <p><strong>2. Motorisation hybride :</strong> Performance et faible consommation.</p>
+                            <p><strong>3. Efficacité :</strong> Idéal sous les panneaux solaires.</p>
+                        `
+                    }
+                ]
             },
             ru: {
                 companyName: "Hebei Sizhou Exploration Machinery",
@@ -1687,12 +1763,6 @@
                 blogSub: "Технические статьи и обзоры",
                 blogTitle: "Инженерный блог SIZHOU ZHONGJUN",
                 blogDesc: "Выберите любую статью ниже, чтобы сразу прочитать полное руководство прямо на этой странице.",
-                b1Title: "Как выбрать гидравлическую геологоразведочную буровую установку для сложных грунтов",
-                b1Excerpt: "Практическое сравнение шпиндельных и вращательных установок при бурении гравия, глины и твердых пород.",
-                b2Title: "Резиновые или стальные гусеницы: выбор ходовой части для транспортера",
-                b2Excerpt: "Разбираем давление на грунт, сцепление на склонах и ресурс обслуживания для максимизации прибыли.",
-                b3Title: "Почему гусеничные косилки на пульте заменяют тракторы на крутых склонах",
-                b3Excerpt: "Узнайте, как низкий центр тяжести предотвращает опрокидывание и снижает затраты на труд на 60%.",
                 readArticle: "Читать статью полностью →",
                 contactSub: "Прямой запрос на завод",
                 contactTitle: "Связаться с SIZHOU ZHONGJUN",
@@ -1700,24 +1770,149 @@
                 lblCompany: "Компания и бренд", lblAddress: "Адрес завода", valAddress: "г. Шицзячжуан, провинция Хэбэй, Китай",
                 lblPhone: "Телефон", lblEmail: "Эл. почта",
                 fName: "Ваше имя / Компания", fEmail: "Email или номер WhatsApp", fProduct: "Интересующая техника",
-                fMsg: "Требования и порт назначения", fSubmit: "Отправить запрос в WhatsApp"
+                fMsg: "Требования и порт назначения", fSubmit: "Отправить запрос в WhatsApp",
+                fPhName: "Иван Иванов / ООО Строй", fPhEmail: "name@company.com / +1 234 567 890", fPhMsg: "Укажите модель, двигатель или количество...",
+                opt1: "Буровая установка", opt2: "Гусеничный транспортер", opt3: "Радиоуправляемая косилка", opt4: "Компактная техника",
+                blogs: [
+                    {
+                        cat: "Буровое дело • SIZHOU ZHONGJUN",
+                        title: "Как выбрать гидравлическую геологоразведочную буровую установку для сложных грунтов",
+                        excerpt: "Практическое сравнение шпиндельных и вращательных установок при бурении гравия, глины и твердых пород.",
+                        body: `
+                            <p><strong>1. Оценка геологических формаций:</strong> Твердость пород определяет необходимый крутящий момент и усилие подачи.</p>
+                            <p><strong>2. Мобильность:</strong> Гусеничные или модульные установки для труднодоступных мест.</p>
+                            <p><strong>3. Гидравлическое охлаждение:</strong> Масляные радиаторы увеличенной площади.</p>
+                        `
+                    },
+                    {
+                        cat: "Ходовая часть • SIZHOU ZHONGJUN",
+                        title: "Резиновые или стальные гусеницы: выбор ходовой части для транспортера",
+                        excerpt: "Разбираем давление на грунт, сцепление на склонах и ресурс обслуживания для максимизации прибыли.",
+                        body: `
+                            <p><strong>1. Резиновые гусеницы:</strong> Для асфальта, бетона и деликатных покрытий садов.</p>
+                            <p><strong>2. Стальные гусеницы:</strong> Для тяжелых грузов свыше 5 тонн в карьерах и грязи.</p>
+                            <p><strong>3. Индивидуальное шасси:</strong> Проектирование под ваши задачи.</p>
+                        `
+                    },
+                    {
+                        cat: "Умное благоустройство • SIZHOU ZHONGJUN",
+                        title: "Почему гусеничные косилки на пульте заменяют тракторы на крутых склонах",
+                        excerpt: "Узнайте, как низкий центр тяжести предотвращает опрокидывание и снижает затраты на труд на 60%.",
+                        body: `
+                            <p><strong>1. Безопасность на склонах 45°:</strong> Оператор находится на безопасном расстоянии с пультом ДУ до 200м.</p>
+                            <p><strong>2. Гибридный привод:</strong> Высокая производительность и экономичность.</p>
+                            <p><strong>3. Высокая эффективность:</strong> Работа под солнечными панелями.</p>
+                        `
+                    }
+                ]
             }
         };
 
-        function setLanguage(lang, label) {
+        let currentActiveLang = 'en';
+
+        function setLanguage(lang, label, updateHistory = true) {
+            currentActiveLang = lang;
             document.documentElement.lang = lang;
             document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
             document.getElementById('currentLangLabel').textContent = label;
 
+            // Save user preference
+            localStorage.setItem('sitemachpro_lang', lang);
+
+            // Optionally update URL query param without full reload
+            if (updateHistory) {
+                const newUrl = lang === 'en' ? window.location.pathname : `${window.location.pathname}?lang=${lang}`;
+                window.history.replaceState({}, '', newUrl);
+            }
+
             const dict = i18nData[lang] || i18nData['en'];
+            
+            // Translate standard text elements
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (dict[key]) {
                     el.textContent = dict[key];
                 }
             });
+
+            // Translate placeholders
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (dict[key]) {
+                    el.placeholder = dict[key];
+                }
+            });
+
+            // Translate select options
+            document.querySelectorAll('select option[data-i18n]').forEach(opt => {
+                const key = opt.getAttribute('data-i18n');
+                if (dict[key]) {
+                    opt.textContent = dict[key];
+                }
+            });
+
+            // Render blog posts in active language
+            renderBlogs(dict.blogs);
             updateCarousel();
         }
+
+        function renderBlogs(blogs) {
+            const gridContainer = document.getElementById('blogGridContainer');
+            gridContainer.innerHTML = '';
+            blogs.forEach((blog, index) => {
+                const card = document.createElement('article');
+                card.className = 'blog-card';
+                card.innerHTML = `
+                    <div class="blog-meta"><span>#Machinery</span><span>•</span><span>4 Min Read</span></div>
+                    <h3 class="blog-title">${blog.title}</h3>
+                    <p class="blog-excerpt">${blog.excerpt}</p>
+                    <a href="#blog-article-view" class="blog-read-btn" onclick="openArticle(${index})">${i18nData[currentActiveLang].readArticle}</a>
+                `;
+                gridContainer.appendChild(card);
+            });
+            // Open first article by default
+            openArticle(0);
+        }
+
+        function openArticle(index) {
+            const dict = i18nData[currentActiveLang] || i18nData['en'];
+            const art = dict.blogs[index];
+            if (art) {
+                document.getElementById('articleCategory').textContent = art.cat;
+                document.getElementById('articleHeading').textContent = art.title;
+                document.getElementById('articleBody').innerHTML = art.body;
+            }
+        }
+
+        /* 5. Contact Form Handler */
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('senderName').value;
+            const contact = document.getElementById('senderEmail').value;
+            const prod = document.getElementById('productSelect').value;
+            const msg = document.getElementById('senderMsg').value;
+            const fullText = `Inquiry for SIZHOU ZHONGJUN\nName: ${name}\nContact: ${contact}\nProduct: ${prod}\nDetails: ${msg}`;
+            window.open(`https://wa.me/8615226505955?text=${encodeURIComponent(fullText)}`, '_blank');
+        }
+
+        /* 6. Initialization on DOM Load (URL Param & LocalStorage Sync) */
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlLang = urlParams.get('lang');
+            const savedLang = localStorage.getItem('sitemachpro_lang');
+            const targetLang = urlLang || savedLang || 'en';
+
+            const langLabels = {
+                en: 'English',
+                ar: 'العربية',
+                es: 'Español',
+                de: 'Deutsch',
+                fr: 'Français',
+                ru: 'Русский'
+            };
+
+            setLanguage(targetLang, langLabels[targetLang] || 'English', false);
+        });
     </script>
 </body>
 </html>
